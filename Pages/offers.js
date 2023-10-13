@@ -5,11 +5,12 @@ import config from '../config';
 export default function offers({navigation, route}) {
     const [offers, setOffers] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
-    const offerPressed = (offerId, offerName,offerDescription) => {
-        navigation.navigate("offer", {
+    const offerPressed = (offerId, offerName,offerDescription, image_url) => {
+        navigation.navigate("Offer", {
             id: offerId,
             name: offerName,
-            description: offerDescription
+            description: offerDescription,
+            img: image_url
         })
     }
     useEffect(()=>{
@@ -37,7 +38,7 @@ export default function offers({navigation, route}) {
             data={offers}
             renderItem = {(offer) => {
                 return (
-                    <Pressable className="flex flex-row my-1" onTouchEnd={() => offerPressed(offer.item.id, offer.item.name, offer.item.description)}>
+                    <Pressable className="flex flex-row my-1" onTouchEnd={() => offerPressed(offer.item.id, offer.item.name, offer.item.description, offer.item.image_url)}>
                         <View className="m-1">
                             <Image className="rounded-xl" source={{uri:offer.item.image_url, width:150,height:150 }}/>
                         </View>
