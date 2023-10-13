@@ -1,12 +1,22 @@
+import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import {  Text, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import offers from './Pages/offers';
+import restaurants from './Pages/restaurants';
+import offer from './Pages/offer';
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
-    <View className="flex bg-green-600 h-full w-full justify-center items-center">
-      <Text className="text-white text-xl text-center">Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="Offers" component={offers} />
+        <Stack.Screen name="resturant" component={restaurants}/>
+        <Stack.Screen name="offer" component={offer}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
