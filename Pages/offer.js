@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import config from '../config';
 import EnhancedImageViewing from 'react-native-image-viewing/dist/ImageViewing';
 
-export default function offer({ navigation, route }) {
+export default function Offer({ navigation, route }) {
 
   const [id, setId] = useState(route.params.id);
   const [name, setName] = useState(route.params.name);

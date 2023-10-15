@@ -2,7 +2,7 @@ import { View, Text, FlatList, Pressable, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import config from '../config';
 
-export default function offers({navigation, route}) {
+export default function Offers({navigation, route}) {
     const [offers, setOffers] = useState([]);
     const [isLoading, setIsLoading] = useState(true)
     const offerPressed = (offerId, offerName,offerDescription, image_url) => {
