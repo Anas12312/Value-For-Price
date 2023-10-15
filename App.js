@@ -2,6 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import {  Text, View } from 'react-native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Offer from './Pages/Offer';
 import Offers from './Pages/Offers';
 import Restaurants from './Pages/Restaurants';
 import Offer from './Pages/Offer';
